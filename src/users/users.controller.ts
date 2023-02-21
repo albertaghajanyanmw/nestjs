@@ -14,7 +14,6 @@ export class UsersController {
   @ApiResponse({ status: 200, type: User })
   @Post()
   create(@Body() userDto: CreateUserDto) {
-    console.log('\n\n userDto = ', userDto);
     return this.userService.createUser(userDto);
   }
 
